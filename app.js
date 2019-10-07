@@ -24,8 +24,12 @@ const game = () => {
                 this.style.animation = '';
             });
         });
+
         options.forEach(option => {
             option.addEventListener("click", function () {
+                let verdict = document.querySelector(".tempText");
+                verdict.innerHTML = ``
+                verdict.style.color = `#fff`;
                 //set both hands
                 playerHand.src = `./assets/rock.png`;
                 computerHand.src = `./assets/rock.png`;
@@ -59,17 +63,20 @@ const game = () => {
         //check for a tie
         if (playerChoice === computerChoice) {
             verdict.textContent = `It's a tie`;
+            verdict.style.color = `#ab3c3c`;
             return;
         }
         //check for rock
         if (playerChoice === "rock") {
             if (computerChoice === "scissor") {
                 verdict.textContent = `You Win`;
+                verdict.style.color = `#ab3c3c`;
                 playerScore++;
             }
             else {
                 computerScore++;
                 verdict.textContent = `Computer wins`;
+                verdict.style.color = `#ab3c3c`;
             }
             updateScore();
             return;
@@ -78,10 +85,12 @@ const game = () => {
         if (playerChoice === "paper") {
             if (computerChoice === "scissor") {
                 verdict.textContent = `Computer wins`;
+                verdict.style.color = `#ab3c3c`;
                 computerScore++;
             }
             else {
                 verdict.textContent = `You Win`;
+                verdict.style.color = `#ab3c3c`;
                 playerScore++;
             }
             updateScore();
@@ -91,10 +100,12 @@ const game = () => {
         if (playerChoice === "scissor") {
             if (computerChoice === "rock") {
                 verdict.textContent = `Computer wins`;
+                verdict.style.color = `#ab3c3c`;
                 computerScore++;
             }
             else {
                 verdict.textContent = `You Win`;
+                verdict.style.color = `#ab3c3c`;
                 playerScore++;
             }
             updateScore();

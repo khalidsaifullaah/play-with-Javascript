@@ -1,19 +1,112 @@
-
 body,html{
     height: 100%;
     margin: 0;
 }
+h4{
+    font-size: 20px;
+}
+h1{
+    font-size: 35px;
+}
+h5{
+    color: #ab3c3c;
+}
+/* General button style (reset) */
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
 
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before,
+.icon-heart:after,
+.icon-star:after,
+.icon-plus:after,
+.icon-file:before {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+/* Button 1 */
+.btn-1 {
+	border: 3px solid #ab3c3c;
+	color: #ab3c3c;
+}
+/* Button 1f */
+.btn-1f {
+	overflow: hidden;
+}
+
+.btn-1f:after {
+	width: 101%;
+	height: 0;
+	top: 50%;
+	left: 50%;
+	background: #ab3c3c;
+	opacity: 0;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.btn-1f:hover,
+.btn-1f:active {
+	color: #fff;
+}
+
+.btn-1f:hover:after {
+	height: 75%;
+	opacity: 1;
+}
+
+.btn-1f:active:after {
+	height: 130%;
+	opacity: 1;
+}
 
 button{
     width: 140px;
 }
-
+.footer{ 
+    position: fixed;    
+    bottom: 15%; 
+    max-width: 100%;
+    font-size: 16px;
+} 
 
 section{
-    background-color: rgb(39, 41, 68);
+    background-color: #191919;
     height: 100vh;
     color: rgb(229, 233, 236);
+    font-family: 'Press Start 2P', cursive;
 }
 
 .introPage{
@@ -46,6 +139,8 @@ div.fadeIn{
     opacity: 1;
     pointer-events: all;
 }
+
+
 
 @keyframes playerHandAnimation{
     0%{
@@ -106,3 +201,53 @@ div.fadeIn{
         transform:  translateY(0px);
     }
 }
+
+
+@media (max-width: 775px) { 
+    .player-hand{
+        transform: rotateY(180deg);
+        width: 100%;
+    }
+    .computer-hand{
+        width: 100%;
+    }
+    .options button{
+        width: 100PX;
+    }
+ }
+ @media (max-width: 775px) { 
+    .player-hand{
+        transform: rotateY(180deg);
+        width: 100%;
+    }
+    .computer-hand{
+        width: 100%;
+    }
+    .options button{
+        width: 100PX;
+    }
+    .footer{ 
+        position: fixed;    
+        bottom: 15%; 
+        max-width: 100%;
+        font-size: 10px;
+    } 
+ }
+ @media (max-width: 395px) { 
+    .player-hand{
+        transform: rotateY(180deg);
+        width: 100%;
+    }
+    .computer-hand{
+        width: 100%;
+    }
+    .options button{
+        width: 90PX;
+    }
+    .footer{ 
+        position: fixed;    
+        bottom: 15%; 
+        max-width: 100%;
+        font-size: 8px;
+    } 
+ }
