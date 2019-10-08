@@ -114,15 +114,22 @@ section{
 }
 .matchPage{
     transition: opacity 0.5s ease 0.5s;
+    padding-top: 30px;
 }
-.intro,.hands{
+.intro{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
-
+.hands{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
 .player-hand{
     transform: rotateY(180deg);
@@ -203,7 +210,7 @@ div.fadeIn{
 }
 
 
-@media (max-width: 775px) { 
+/* @media (max-width: 775px) { 
     .player-hand{
         transform: rotateY(180deg);
         width: 100%;
@@ -214,7 +221,14 @@ div.fadeIn{
     .options button{
         width: 100PX;
     }
- }
+    .hands{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+ } */
  @media (max-width: 775px) { 
      h1{
         font-size: 28px;
@@ -234,6 +248,13 @@ div.fadeIn{
         bottom: 10%; 
         max-width: 100%;
         font-size: 10px;
+    }
+    .hands{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
     } 
  }
  @media (max-width: 395px) { 
@@ -255,5 +276,12 @@ div.fadeIn{
         bottom: 10%; 
         max-width: 100%;
         font-size: 8px;
+    }
+    .hands{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
     } 
  }
