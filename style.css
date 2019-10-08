@@ -101,6 +101,11 @@ button{
     max-width: 100%;
     font-size: 16px;
 } 
+.footer-logo{ 
+    position: fixed;    
+    bottom: 10%; 
+    max-width: 100%;
+} 
 
 section{
     background-color: #191919;
