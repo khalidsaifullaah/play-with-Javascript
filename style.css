@@ -216,6 +216,9 @@ div.fadeIn{
     }
  }
  @media (max-width: 775px) { 
+     h1{
+        font-size: 28px;
+     }
     .player-hand{
         transform: rotateY(180deg);
         width: 100%;
@@ -228,12 +231,15 @@ div.fadeIn{
     }
     .footer{ 
         position: fixed;    
-        bottom: 15%; 
+        bottom: 10%; 
         max-width: 100%;
         font-size: 10px;
     } 
  }
  @media (max-width: 395px) { 
+    h1{
+        font-size: 28px;
+     }
     .player-hand{
         transform: rotateY(180deg);
         width: 100%;
@@ -246,7 +252,7 @@ div.fadeIn{
     }
     .footer{ 
         position: fixed;    
-        bottom: 15%; 
+        bottom: 10%; 
         max-width: 100%;
         font-size: 8px;
     } 
